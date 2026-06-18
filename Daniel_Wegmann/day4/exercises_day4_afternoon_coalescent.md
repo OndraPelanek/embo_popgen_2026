@@ -1,17 +1,25 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 ### Some math to warm up
 
 **Q1)** Given a constant population of size 2*N* = 100, what is the
 probability that two individuals pick the same parent one generation
 before? What that they pick the same parent two generations before?
+
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 The probability that the pick the same parent the previous generation is
 $p(t_2=1) =\frac{1}{2N} = 0.01$. The probability that the pick the same
 parent two generations ago implies that they did not do so one
 generation ago. Hence
 $P(t_2=2)=\left(1-\frac{1}{2N}\right)\frac{1}{2N} = 0.0099$.
+
 </details>
 
 <br/>
@@ -24,13 +32,14 @@ of the standard coalescent and the infinites sites model hold.
 **a)** What is the effective size of this population?
 
 <details>
-<summary>
-Solutions
-</summary>
-Under the infinite sites model, E \[*H*\] = 4*N*<sub>*e*</sub>*μ*, and
+
+<summary>Solutions</summary>
+
+Under the infinite sites model, E $$*H*$$ = 4*N*<sub>*e*</sub>*μ*, and
 hence we can get an estimate $\hat{N_e}=\frac{H}{4\mu}$. Here,
 $H=\frac{21}{10^4}=2.1$, and hence
 $\hat{N_e}=\frac{2.1\cdot 10^{-3}}{4\cdot 10^{-9}}=\frac{2.1}{4}10^6 = 5.25 \cdot 10^5$.}
+
 </details>
 
 <br/>
@@ -39,12 +48,13 @@ $\hat{N_e}=\frac{2.1\cdot 10^{-3}}{4\cdot 10^{-9}}=\frac{2.1}{4}10^6 = 5.25 \cdo
 the two sequences in this individual?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 The
-E \[*T*<sub>*M**R**C**A*</sub>\] = 2*N*<sub>*e*</sub> = 1.05 ⋅ 10<sup>6</sup>
+E $$*T*<sub>*M**R**C**A*</sub>$$ = 2*N*<sub>*e*</sub> = 1.05 ⋅ 10<sup>6</sup>
 generations.}
+
 </details>
 
 <br/>
@@ -56,9 +66,9 @@ are more closely related to each other than they are to any of the
 sequences of the other individual?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 There are two cases (topologies) for which this is true:<br/> Case 1: If
 the two lineages from the first individual are the first to coalesce,
 which happens with probability
@@ -73,24 +83,27 @@ $\frac{1}{6} \cdot \frac{1}{3} = \frac{1}{18}$.<br/> Hence, the total
 probability that the lineages of the first individual are more closely
 related than any of them is to a sequence of the other individual is
 $\frac{1}{6} + \frac{1}{18} =   \frac{3}{18} + \frac{1}{18} = \frac{2}{9}$.
+
 </details>
 
 <br/>
 
 **Q4)** The following DNA sequences were obtained from a population:
 
+```{=html}
 <pre><code>A<span style="color:red;">T</span>CGTGCAC<span style="color:red;">A</span> AC<span style="color:red;">T</span>TGCAACA</code>
 <code>A<span style="color:red;">T</span>CGTG<span style="color:red;">G</span>ACC AC<span style="color:red;">T</span>TGCAAC<span style="color:red;">T</span></code>
 <code>AGCGTG<span style="color:red;">G</span>ACC AC<span style="color:red;">T</span>TGCAAC<span style="color:red;">T</span></code></pre>
+```
 
 **a)** Calculate the Tajima estimator *θ*<sub>*T*</sub> per site from
 this data.
 
 <details>
-<summary>
-Solutions
-</summary>
-Pairwise differences *d*<sub>*i**j*</sub> between individuals *i* and
+
+<summary>Solutions</summary>
+
+Pairwise differences *d*<sub>\*i\*\*j</sub> between individuals i\* and
 *j*: *d*<sub>12</sub> = 3, *d*<sub>13</sub> = 4, *d*<sub>14</sub> = 3,
 *d*<sub>23</sub> = 3, *d*<sub>24</sub> = 4 and
 *d*<sub>34</sub> = 1.<br/> The average number of pair-wise differences
@@ -98,6 +111,7 @@ is
 $\pi = \frac{d\_{12}+d\_{13}+d\_{14}+d\_{23}+d\_{24}+d\_{34}}{6} = \frac{18}{6} = 3$<br/>
 Hence, the Tajima estimator is
 $\theta_T = \frac{\pi}{20}= \frac{3}{20} = 0.15$ per base pair.
+
 </details>
 
 <br/>
@@ -106,12 +120,13 @@ $\theta_T = \frac{\pi}{20}= \frac{3}{20} = 0.15$ per base pair.
 this data.
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 There are a total of *S* = 5 segregating sites in this data.<br/>
 $\theta_W = S \frac{1}{\displaystyle \sum\_{k=1}^{n-1}\frac{1}{k}} = \frac{5}{1 + \frac{1}{2} + \frac{1}{3}} = 5\frac{6}{11} = \frac{30}{11} = 2.7$,
 or *θ*<sub>*W*</sub> = 0.14 per base pair.
+
 </details>
 
 <br/>
@@ -119,15 +134,16 @@ or *θ*<sub>*W*</sub> = 0.14 per base pair.
 **c)** Why are these two estimators not identical?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 Since they are both estimators, they are often slightly different even
 if the population was constant and evolving under the assumptions of
 Wright-Fisher model. Only if there was an infinite amount of data, the
 two must be identical. Importantly, however, these estimates will likely
 be different if the assumption of a standard neutral coalescent is
 violated.
+
 </details>
 
 <br/>
@@ -137,9 +153,8 @@ data. Do the data contain more, fewer or the same number of singletons
 as expected under the standard neutral coalescent model?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
 
 ``` r
 barplot(c(1,3,1), xlab = "Derived allele frequency", ylab = "Counts")
@@ -159,6 +174,7 @@ dould expect twice as many singletons that doubletons. However, there is
 so little data that we expect differences between expectations and
 observations. The only way to tell if there are too few singletons is
 thus a statistical test.
+
 </details>
 
 <br/>
@@ -209,24 +225,26 @@ thereby learn how to use `fastsimcoal2`. The demographic model you want
 to simulate needs to be specified in an in an input file. Here is an
 example of such a file for a constant size population:
 
-    //Parameters for the coalescence simulation program : simcoal.exe
-    1 samples to simulate
-    //Deme sizes (haploid number of genes)
-    10000
-    //Sample sizes
-    20
-    //Growth rates
-    0
-    //Number of migration matrices : If 0 : No migration between demes
-    0
-    //Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
-    0 historical events
-    //Number of independent chromosome
-    1 0
-    //Number of contiguous linkage blocks
-    1
-    //Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
-    DNA 10000 0 1.0e-07 0.5
+```         
+//Parameters for the coalescence simulation program : simcoal.exe
+1 samples to simulate
+//Deme sizes (haploid number of genes)
+10000
+//Sample sizes
+20
+//Growth rates
+0
+//Number of migration matrices : If 0 : No migration between demes
+0
+//Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
+0 historical events
+//Number of independent chromosome
+1 0
+//Number of contiguous linkage blocks
+1
+//Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
+DNA 10000 0 1.0e-07 0.5
+```
 
 Have a look at that file. It first specified the number of populations
 (samples), then the initial (backward in time) haploid population size
@@ -308,9 +326,9 @@ mean(unlist(lapply(trees, function(x){ max(branching.times(x)) })))
 Does it match the expectation?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 The topologies are independent of the population size and should not be
 visually different between simulations conducted with a small or large
 population size. The expected average tree height, however, should be
@@ -319,6 +337,7 @@ diploid individuals. The `Deme size` specified in `fastsimocal2`,
 however, is in the number of haploid individuals and hence twice that of
 the number of diploid individuals. The expected tree height should
 therefore match twice the number of haploid individuals.
+
 </details>
 
 <br/>
@@ -331,8 +350,10 @@ loci (DNA sequences) and to then tabulate the frequencies of all
 polymorphic sites. Specifically, copy the above input file to a new file
 `constsize_sfs.par` and change the following line:
 
-    //Number of independent chromosome
-    10000 0
+```         
+//Number of independent chromosome
+10000 0
+```
 
 This tells `fastsimcoal2` to simulate 10<sup>4</sup> independent loci
 (each as specified in the lined that follow, i.e. of 10kb each). To then
@@ -349,12 +370,13 @@ SFS:
 fraction of singletons to doubletons?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 The singletons and doubletons are shown in the second and third column
 with header `d0_1` and `d0_2`. Under a constant size population, there
 should be twice as many singletons as doubletons.
+
 </details>
 
 <br/>
@@ -365,8 +387,10 @@ Simulate a model of exponential population growth. You can do so my
 creating a new input file `expgrowth.par` that differs from your
 constant size file on these lines:
 
-    //Growth rates
-    -0.01
+```         
+//Growth rates
+-0.01
+```
 
 Note that we specify the growth rate as negative because `fastsimcoal2`
 is running backward in time - a growing population is shrinking backward
@@ -376,13 +400,14 @@ in time.
 case? And how does the SFS change?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 You should observe that the genealogies under population growth have
 much longer terminal branches. That also results in an excess of rare
 compared to common variants. There are, for instance, way more than
 twice as many singletons than doubletons.
+
 </details>
 
 <br/>
@@ -401,9 +426,11 @@ constsize input file to `split.par` and edit it as follows:
 
 <!-- -->
 
-    //Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
-    1 historical events
-    10000 1 0 1 1 0 0
+```         
+//Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
+1 historical events
+10000 1 0 1 1 0 0
+```
 
 Here, the first number indicates the time (10,000 generations) of the
 event. The next numbers indicate the source and sink population and the
@@ -421,32 +448,33 @@ often fails to give proper errors if something is off. So if you get
 strange errors or the model seems off, check your input file carefully!
 
 <details>
-<summary>
-Solutions
-</summary>
 
-    //Parameters for the coalescence simulation program : simcoal.exe
-    2 samples to simulate
-    //Deme sizes (haploid number of genes)
-    10000
-    1000
-    //Sample sizes
-    10
-    10
-    //Growth rates
-    0
-    0
-    //Number of migration matrices : If 0 : No migration between demes
-    0
-    //Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
-    1 historical events
-    10000 1 0 1 1 0 0
-    //Number of independent chromosome
-    1 0
-    //Number of contiguous linkage blocks
-    1
-    //Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
-    DNA 10000 0 1.0e-07 0.5
+<summary>Solutions</summary>
+
+```         
+//Parameters for the coalescence simulation program : simcoal.exe
+2 samples to simulate
+//Deme sizes (haploid number of genes)
+10000
+1000
+//Sample sizes
+10
+10
+//Growth rates
+0
+0
+//Number of migration matrices : If 0 : No migration between demes
+0
+//Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
+1 historical events
+10000 1 0 1 1 0 0
+//Number of independent chromosome
+1 0
+//Number of contiguous linkage blocks
+1
+//Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
+DNA 10000 0 1.0e-07 0.5
+```
 
 </details>
 
@@ -459,9 +487,9 @@ which population was smaller in size? How do the trees differ if the
 split time was much younger, say 100 generations?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 With a split time of 10,000 generations, the samples from population 1
 will mostly have coalesced prior to the split (the expected time to the
 MRCA is 2,000 generations). So the samples from that population should
@@ -470,6 +498,7 @@ samples of population 0. But do appreciate the variation in
 genealogies!<br/> If you use a much younger split time, then the samples
 within each population will not have time to coalesce prior to the split
 and appear mingled in the genealogies.
+
 </details>
 
 <br/>
@@ -479,15 +508,16 @@ average time (across replicate genealogies) to the MRCA of all samples?
 Does it match the expectation?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 The expected time to the MRCA should be the split time plus the time to
 the MRCA within the ancestral population. With a split time of 50,000
 generations, there is likely only one lineage per population surviving
 until the split. The time to MRCA in the ancestral population (which is
 if size 10,000) will thus be 10,000 generations and the expected total
 time 50,000 + 10,000 = 60,000 generations.
+
 </details>
 
 <br/>
@@ -504,30 +534,31 @@ historical events (remember that `fastsimcoal2` works backward in time):
     size of 10,000 individuals.
 
 <details>
-<summary>
-Solutions
-</summary>
 
-    //Parameters for the coalescence simulation program : simcoal.exe
-    1 samples to simulate
-    //Deme sizes (haploid number of genes)
-    10000
-    //Sample sizes
-    20
-    //Growth rates
-    0
-    //Number of migration matrices : If 0 : No migration between demes
-    0
-    //Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
-    2 historical events
-    90 0 0 1 0.001 0 0
-    100 0 0 1 1000 0 0
-    //Number of independent chromosome
-    1 0
-    //Number of contiguous linkage blocks
-    1
-    //Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
-    DNA 10000 0 1.0e-07 0.5
+<summary>Solutions</summary>
+
+```         
+//Parameters for the coalescence simulation program : simcoal.exe
+1 samples to simulate
+//Deme sizes (haploid number of genes)
+10000
+//Sample sizes
+20
+//Growth rates
+0
+//Number of migration matrices : If 0 : No migration between demes
+0
+//Historical event: time, source, sink, migrants, new deme size, new growth rate, new migration matrix
+2 historical events
+90 0 0 1 0.001 0 0
+100 0 0 1 1000 0 0
+//Number of independent chromosome
+1 0
+//Number of contiguous linkage blocks
+1
+//Per Block: Data type, No. of loci, Recombination rate to the right-side locus, plus optional parameters
+DNA 10000 0 1.0e-07 0.5
+```
 
 </details>
 
@@ -537,11 +568,12 @@ Solutions
 those obtained for a constant size population. What do you notice?
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 During the bottleneck, many coalescent events occur. This results in
 very many terminal branches that are very short.
+
 </details>
 
 <br/>
@@ -550,15 +582,16 @@ very many terminal branches that are very short.
 intuition with simulations!
 
 <details>
-<summary>
-Solutions
-</summary>
+
+<summary>Solutions</summary>
+
 Check above to see how to simulate the expected SFS. Since the terminal
 branches are shorter than under a constant size model, there are too few
 rare mutations compared to the common mutations. Under a constant size
 model, we expect 1/5 as many 5-tons than singletons, for instance. But
 under this severe bottleneck model, we obtain almost half as many as
 singletons.
+
 </details>
 
 <br/>
