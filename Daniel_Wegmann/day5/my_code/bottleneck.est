@@ -1,0 +1,7 @@
+// Parameter file for the bottleneck model
+// ***************************************
+[PARAMETERS]
+//#isInt? #name #dist. #min #max
+1 T_BOTTLENECK unif 1 10000 output
+0 SIZE_CHANGE unif 0 50 output
+1 N_CURRENT unif 1 50000 output
